@@ -21,6 +21,6 @@ class TaskConsumer(Consumer):
 
 task_repo = TaskRepository(driver)
 
-task_consumer = TaskConsumer(task_repo, redis, "tasks", "group", "tasks", 1000, 500)
+task_consumer = TaskConsumer(task_repo, redis, "tasks", "group", "tasks", 1000, 5)
 
 task_consumer.run()
