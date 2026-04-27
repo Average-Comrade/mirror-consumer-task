@@ -1,4 +1,4 @@
-FROM python:3.13 as builder
+FROM python:3.13-slim as builder
 
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -16,7 +16,7 @@ RUN pip install --prefix=/install -r requirements.txt
 
 
 
-FROM python:3.13 as runner
+FROM python:3.13-slim as runner
 
 WORKDIR /APP
 
